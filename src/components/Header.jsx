@@ -61,11 +61,7 @@ const Header = () => {
                         src={ytLogo}
                         alt="Youtube"
                     />
-                    <img
-                        className="h-full md:hidden"
-                        src={ytLogoMobile}
-                        alt="Youtube"
-                    />
+                    
                 </Link>
             </div>
             <div className="group flex items-center">
