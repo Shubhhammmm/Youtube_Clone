@@ -1,5 +1,3 @@
-
-
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -13,7 +11,7 @@ import { FiBell } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 
 import { Context } from "../context/contextApi";
-import Loader from "../shared/Loader";
+import Loader from "../shared/loader";
 
 const Header = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -57,11 +55,15 @@ const Header = () => {
                 )}
                 <Link to="/" className="flex h-5 items-center">
                     <img
-                        className="h-full  dark:md:block"
+                        className="h-full dark:md:block"
                         src={ytLogo}
                         alt="Youtube"
                     />
-                    
+{/*                     <img
+                        className="h-full md:hidden"
+                        src={ytLogoMobile}
+                        alt="Youtube"
+                    /> */}
                 </Link>
             </div>
             <div className="group flex items-center">
@@ -71,7 +73,7 @@ const Header = () => {
                     </div>
                     <input
                         type="text"
-                        className="bg-transparent outline-none text-black pr-5 pl-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
+                        className="bg-transparent outline-none text-white pr-5 pl-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyUp={searchQueryHandler}
                         placeholder="Search"
@@ -79,10 +81,11 @@ const Header = () => {
                     />
                 </div>
                 <button
+                    style={{color: "white"}}
                     className="w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]"
                     onClick={() => searchQueryHandler("searchButton")}
                 >
-                    <IoIosSearch className="text-white text-xl" />
+                    <IoIosSearch className="text-grey text-xl" />
                 </button>
             </div>
             <div className="flex items-center">
@@ -95,7 +98,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                    <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" alt="Account" />
+                    <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
                 </div>
             </div>
         </div>
