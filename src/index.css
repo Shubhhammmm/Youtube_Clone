@@ -66,6 +66,10 @@ code {
     }
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
 .custom-h {
     height: auto !important;
 }
