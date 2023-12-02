@@ -71,7 +71,8 @@ const Header = () => {
                     <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
                         <IoIosSearch className="text-white text-xl" />
                     </div>
-                    <input
+                    <input 
+                        style ={{color: "white"}}
                         type="text"
                         className="bg-transparent outline-none text-white pr-5 pl-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
                         onChange={(e) => setSearchQuery(e.target.value)}
